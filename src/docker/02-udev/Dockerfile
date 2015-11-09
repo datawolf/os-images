@@ -1,3 +1,3 @@
-FROM rancher/os-base
+FROM quarkos/os-base
 COPY udev.sh /
 CMD ["/udev.sh"]

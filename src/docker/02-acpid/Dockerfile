@@ -1,2 +1,2 @@
-FROM rancher/os-base
+FROM quarkos/os-base
 CMD ["/usr/sbin/acpid", "-f"]

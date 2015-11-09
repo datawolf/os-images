@@ -4,4 +4,4 @@ set -e
 cd $(dirname $0)
 source ./build-common
 
-download 0a8084b35f4fba585e48ebd221cbcb46eec6696e https://github.com/rancher/os-base/releases/download/v2015.08.1-1/os-base.tar.xz
+download 302721ac9a7c51a28cb613ba0d008abf0f5732e3 http://10.229.49.203/quark-arm64-os-base.tar.xz

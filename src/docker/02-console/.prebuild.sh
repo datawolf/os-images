@@ -9,7 +9,7 @@ rm -rf ./build
 mkdir -p ./build
 
 cat > ./build/lsb-release << EOF
-DISTRIB_ID=RancherOS
+DISTRIB_ID=QuarkOS
 DISTRIB_RELEASE=${VERSION}
-DISTRIB_DESCRIPTION="RancherOS ${VERSION}"
+DISTRIB_DESCRIPTION="QuarkOS ${VERSION}"
 EOF

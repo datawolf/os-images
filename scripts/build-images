@@ -13,7 +13,7 @@ export VERSION=${VERSION:?"VERSION not set"}
 cd ${BASEDIR}
 
 for i in src/docker/[0-9]*; do
-    tag="rancher/os-$(echo ${i} | cut -f2 -d-)"
+    tag="quarkos/os-$(echo ${i} | cut -f2 -d-)"
     echo Building ${tag}:${VERSION}
     if [ -x ${i}/.prebuild.sh ]; then
         ${i}/.prebuild.sh;
@@ -24,7 +24,7 @@ done
 
 if [ "${DO_PUSH}" == "--push" ]; then
     for i in src/docker/[0-9]*; do
-        tag="rancher/os-$(echo ${i} | cut -f2 -d-)"
+        tag="quarkos/os-$(echo ${i} | cut -f2 -d-)"
         docker push ${tag}:${VERSION} || :
     done
 fi

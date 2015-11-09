@@ -1,9 +1,9 @@
-FROM rancher/os-rootfs
+FROM quarkos/os-rootfs
 RUN ln -s /dev/null /etc/udev/rules.d/80-net-name-slot.rules
 # Cleanup Buildroot
 RUN rm /sbin/poweroff /sbin/reboot /sbin/halt && \
     sed -i '/^root/s!/bin/sh!/bin/bash!' /etc/passwd && \
-    echo 'RancherOS \n \l' > /etc/issue && \
+    echo 'QuarkOS \n \l' > /etc/issue && \
     rm -rf /run \
        /linuxrc \
        /etc/os-release \
